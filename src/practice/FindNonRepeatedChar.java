@@ -32,7 +32,8 @@ public class FindNonRepeatedChar {
         System.out.println(result1);
 
 
-        Character result2 = input.chars().mapToObj(c -> (char) c)
+        Character result2 = input.chars()
+                .mapToObj(c -> (char) c) //return stream of charactor
                 .filter(ch -> input.indexOf(ch) == input.lastIndexOf(ch)) //indexOf() -> the index of the first occurrence of the character in the character sequence
                 .findFirst().orElse(null);
 
