@@ -1,4 +1,4 @@
-package model;
+package optional.model;
 
 import java.util.Arrays;
 import java.util.List;
@@ -10,9 +10,9 @@ public class StudentDatabase {
 
 
     public static Supplier<Student> studentSupplier = () -> {
-//        Bike bike = new Bike("ABC","XYZ");
+        Bike bike = new Bike("ABC","XYZ");
         Student student =  new Student("Adam", 2, 3.6, "male", Arrays.asList("swimming", "basketball", "volleyball"));
-//        student.setBike(Optional.ofNullable(bike));
+        student.setBike(Optional.ofNullable(bike));
         return student;
     };
     /**
@@ -38,7 +38,7 @@ public class StudentDatabase {
         Student student5 = new Student("Sophia", 4, 3.5, "female", Arrays.asList("swimming", "dancing", "football"),15);
         Student student6 = new Student("James", 4, 3.9, "male", Arrays.asList("swimming", "basketball", "baseball", "football"),14);
 
-        List<Student> students = Arrays.asList(student1, student2, student3, student4, student5, student6);
+        List<Student> students = Arrays.asList(student1, student2, student3, student4, student5, student6,null);
         return students;
     }
 }

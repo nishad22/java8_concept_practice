@@ -9,11 +9,12 @@ import java.util.function.Consumer;
 public class ConsumerExample {
 
     private static final List<Student> studentList = StudentDatabase.getAllStudents();
-    private static final Consumer<Student> c1 = (student) -> System.out.println(student.getName() +" "+student.getActivities());
+    private static final Consumer<Student> c1 = (student)
+            -> System.out.println(student.getName() +" "+student.getActivities());
 
 
     private static void printStudent() {
-        Consumer<Student> c1 = (student) -> System.out.println(student);
+        Consumer<Student> c1 = (System.out::println); //student -> System.out.println(student)
         studentList.forEach(c1);
     }
 
