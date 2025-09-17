@@ -10,7 +10,7 @@ import java.util.function.Function;
 
 public class FunctionExample {
 
-    static Function<String, String> f1 = (name) -> name.toUpperCase();
+    static Function<String, String> f1 = String::toUpperCase;
     static Function<String, String> f2 = (str) -> str.toUpperCase().concat("defaults");
 
     static Function<List<Student>, Map<String,Double>> studentMap = (students -> {
