@@ -23,10 +23,10 @@ public class ZonedDateTimeExample {
         System.out.println("IST calcutta: "+ZoneId.of("Asia/Calcutta"));
         System.out.println(ZonedDateTime.now(Clock.system(ZoneId.of("Asia/Calcutta"))));
 
-        LocalDateTime localDateTime = LocalDateTime.now(ZoneId.of("Asia/Calcutta"));
+        LocalDateTime localDateTime = LocalDateTime.now(ZoneId.of("Asia/Dubai"));
         System.out.println("Dubai time: "+localDateTime);
 
-        LocalDateTime localDateTime1 = LocalDateTime.now(Clock.system(ZoneId.of("Asia/Calcutta")));
+        LocalDateTime localDateTime1 = LocalDateTime.now(Clock.system(ZoneId.of("Asia/Dubai")));
         System.out.println("Dubai time with Clock.System "+localDateTime1);
 
         //convert from LocalDateTime, instant to ZonedLocalDate and time
@@ -41,5 +41,4 @@ public class ZonedDateTimeExample {
         System.out.println("zonedDateTime2: "+zonedDateTime2);
 
     }
-
 }
