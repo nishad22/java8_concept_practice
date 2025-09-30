@@ -25,8 +25,11 @@ public class session {
     private static void findAge() {
         LocalDate localDate = LocalDate.now();
         LocalDate localDate1 = LocalDate.of(1985,01,23);
+        System.out.println(ChronoUnit.YEARS.between(localDate1,localDate));
 
-
+        //using Period
+        Period period = localDate1.until(localDate);
+        System.out.println("find age using period: "+period.getYears());
     }
 
     //    Reverse each word of a string using Java 8 streams
@@ -53,5 +56,7 @@ public class session {
 
         System.out.println(map);
     }
+
+
 
 }

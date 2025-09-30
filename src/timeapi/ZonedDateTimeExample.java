@@ -14,7 +14,7 @@ public class ZonedDateTimeExample {
         System.out.println("zonedDateTime(): "+zonedDateTime);
         System.out.println("getOffset(): "+zonedDateTime.getOffset());
         System.out.println("getZone() -> ZoneID: "+zonedDateTime.getZone());
-//        System.out.println("Available zone: "+ ZoneId.getAvailableZoneIds());
+        System.out.println("Available zone: "+ ZoneId.getAvailableZoneIds());
 //        ZoneId.getAvailableZoneIds()
 //                .stream()
 //                .forEach(System.out::println);
