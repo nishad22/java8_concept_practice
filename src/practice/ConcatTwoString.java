@@ -18,5 +18,7 @@ public class ConcatTwoString {
         String string = list1.stream().reduce(" ",(a,b) -> a.concat(" ").concat(b));
         System.out.println("\nusing reduce(): "+string);
 
+        String result = list2.stream().reduce(" ",(a,b) -> a.concat(" ").concat(b));
+        System.out.println(result);
     }
 }
