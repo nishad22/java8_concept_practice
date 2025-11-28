@@ -13,5 +13,9 @@ public class ExtractDuplicateElementFromArray {
         listOfIntegers.stream()
                 .filter(num -> !set.add(num))
                 .forEach(num -> System.out.println("duplicate element: "+num));
+
+        listOfIntegers.stream()
+                .distinct()
+                .forEach(num -> System.out.println("using distinct() filter our duplicate element: "+num));
     }
 }
